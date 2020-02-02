@@ -1,0 +1,35 @@
+body{
+    width: 600px;
+    margin: 0 auto;
+}
+
+header h1{
+    background-color: whitesmoke;
+    text-align: center;
+
+}
+
+.container{
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px 10px 10px 60px;
+    background-color: whitesmoke;
+
+}
+.btn{
+    background: rgb(146, 138, 138);
+    color: white;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    
+}
+
+.bg-dark{
+    background: red;
+}
+
+.error {
+    background: red;
+    color: black;
+}

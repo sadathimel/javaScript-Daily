@@ -29,3 +29,5 @@ function f() {
 }
 console.log(a);
 f();
+
+

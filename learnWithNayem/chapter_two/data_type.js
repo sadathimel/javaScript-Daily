@@ -55,3 +55,10 @@ var xyz = null
 
 console.log(abc)
 console.log(xyz)
+
+var hex = 0xff
+console.log(hex)
+
+
+var oct = 0756
+console.log(oct)

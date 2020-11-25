@@ -1,4 +1,4 @@
-var n = 10;
+var n = 11;
 var str = '';
 
 if( n % 2 == 0){
@@ -7,3 +7,6 @@ if( n % 2 == 0){
     str = "ODD"
 }
 console.log(str);
+
+var result = n % 2 == 0 ? 'EVEN' : 'ODD'
+console.log(result)

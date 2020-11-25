@@ -26,3 +26,26 @@ switch(today){
         break;
     default: console.log('nat a valid number')              
 }
+
+var rollNo = 6;
+switch(rollNo){
+    case 1:
+        console.log('Himel');
+        break;
+    case 2:
+        console.log('opel');
+        break;
+    case 3:
+        console.log('salma');
+        break;
+    case 4:
+        console.log('sadat');
+        break;
+    case 5:
+        console.log('tranvir');
+        break;
+    case 6:
+        console.log('umme');
+        break;
+    default: console.log('no match rollNo')           
+}

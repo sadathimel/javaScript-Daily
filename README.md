@@ -1,1 +1,1 @@
-# JavaScript
+#Daily Javascript coding Practice 

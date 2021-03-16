@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Even Number or Odd Number</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label>Enter Your Number : </label> <br>
+        <input type="number" id="input_num">
+        <button type="submit" onclick="odd_even()">Click Here..</button>
+    </form>
+
+    <script>
+    function odd_even(){
+        var a;
+        a = Number(document.getElementById('input_num').value);
+        if(a % 2== 0){
+            document.write("Even Number");
+        }else {
+            document.write("Odd Number");
+        }
+    }
+</script>
+</body>
+</html>
+

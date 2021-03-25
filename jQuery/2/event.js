@@ -21,3 +21,6 @@ $("h1").on("click", function(){
 $("h1").on("click", function(){
     $(this).css("color","blue");
 });
+$("h1").on("click", function(){
+    $(this).css("color","red");
+});

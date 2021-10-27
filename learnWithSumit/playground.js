@@ -58,8 +58,9 @@
 
 // truthy falsy value
 // var myVar = true;
-var myVar = "" //it's false value
-if(myVar){
+var myVar = [];
+// var myVar = "" //it's false value(False, 0 , "" , null, undefined, NaN)-> falsy
+if(!myVar){
 console.log("i am truthy");
 } else {
     console.log("i am false");

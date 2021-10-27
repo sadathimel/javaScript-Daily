@@ -31,9 +31,9 @@
 
 
 
-const searchInput = document.querySelector(".search");
-const display = document.querySelector(".result");
-const thanks = document.querySelector(".thanks");
+// const searchInput = document.querySelector(".search");
+// const display = document.querySelector(".result");
+// const thanks = document.querySelector(".thanks");
 
 // Normal function that works perfectly
 
@@ -49,8 +49,18 @@ const thanks = document.querySelector(".thanks");
 // }
 
 
-const show =()=>{
-    display.innerHTML = this.value;
-}
+// const show =()=>{
+//     display.innerHTML = this.value;
+// }
 
-searchInput.addEventListener("keyup", show);
+// searchInput.addEventListener("keyup", show);
+
+
+// truthy falsy value
+// var myVar = true;
+var myVar = "" //it's false value
+if(myVar){
+console.log("i am truthy");
+} else {
+    console.log("i am false");
+}

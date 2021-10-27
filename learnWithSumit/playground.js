@@ -56,12 +56,84 @@
 // searchInput.addEventListener("keyup", show);
 
 
-// truthy falsy value
-// var myVar = true;
-var myVar = [];
-// var myVar = "" //it's false value(False, 0 , "" , null, undefined, NaN)-> falsy
-if(!myVar){
-console.log("i am truthy");
-} else {
-    console.log("i am false");
-}
+// // truthy falsy value
+// // var myVar = true;
+// var myVar = [];
+// // var myVar = "" //it's false value(False, 0 , "" , null, undefined, NaN)-> falsy
+// if(!myVar){
+// console.log("i am truthy");
+// } else {
+//     console.log("i am false");
+// }
+
+
+
+// ternary operator
+// var age = 17;
+
+// var type;
+// if(age >= 18){
+//     type = "adult";
+// }else {
+//     type = "child";
+// }
+
+// var type = age >= 18 ? "adult" : age < 10 ? "child" : "young";
+
+
+
+// console.log(type);
+
+
+// var isLoggedin = true;
+
+// var access = isLoggedin ? true : false;
+
+var a = 5;
+
+var access = a > 4;
+
+console.log(access)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

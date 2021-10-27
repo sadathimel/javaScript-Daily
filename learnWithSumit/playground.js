@@ -37,15 +37,20 @@ const thanks = document.querySelector(".thanks");
 
 // Normal function that works perfectly
 
-function show(){
-    var self = this;
-    display.innerHTML = this.value;
+// function show(){
+//     // var self = this;
+//     display.innerHTML = this.value;
     
-    setTimeout(function (){
-        // thanks.innerHTML = `You have typed: ${this.value}`;
-        thanks.innerHTML = `You have typed: ${self.value}`;
-    },1000 );
-}
+//     setTimeout(function (){
+//         // thanks.innerHTML = `You have typed: ${this.value}`;
+//         // thanks.innerHTML = `You have typed: ${self.value}`;
 
+//     },1000 );
+// }
+
+
+const show =()=>{
+    display.innerHTML = this.value;
+}
 
 searchInput.addEventListener("keyup", show);

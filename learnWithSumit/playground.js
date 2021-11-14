@@ -89,11 +89,11 @@
 
 // var access = isLoggedin ? true : false;
 
-var a = 5;
+// var a = 5;
 
-var access = a > 4;
+// var access = a > 4;
 
-console.log(access)
+// console.log(access)
 
 
 

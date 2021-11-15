@@ -29,7 +29,7 @@ const a = 10,
 
 for (let i = 0; i < funcs.length; i++) {
   const result = funcs[i](a, b);
-//   console.log(`[${funcs[i].name}] Result = ${result}`);
+  //   console.log(`[${funcs[i].name}] Result = ${result}`);
 }
 
 //   Array of Arraus - Multi Dimensional Array
@@ -41,39 +41,62 @@ const pointTable = [
 ];
 
 // One Dimensional Traverse
-for ( let i = 0; i < pointTable.length; i++){
-    // console.log(`Point ${i} - x=${pointTable[i][0]} and y=${pointTable[i][1]}`);
+for (let i = 0; i < pointTable.length; i++) {
+  // console.log(`Point ${i} - x=${pointTable[i][0]} and y=${pointTable[i][1]}`);
 }
 
-for( let i = 0; i < pointTable.length; i++){
-    for(let j = 0; j < pointTable[i].length; j++){
-        // console.log(`Points [${i} , ${j}] = ${pointTable[i][j]} `)
-    }
+for (let i = 0; i < pointTable.length; i++) {
+  for (let j = 0; j < pointTable[i].length; j++) {
+    // console.log(`Points [${i} , ${j}] = ${pointTable[i][j]} `)
+  }
 }
 
 // Two Dimensional Traverse
 
 const numbers = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 // console.log(numbers[2][0])
 // for (let j = 0; j < numbers[2].length; j++){
 //     console.log(numbers[2][j]);
 // }
 
-
-for(let i = 0; i < numbers.length; i++){
-    for(let j = 0; j < numbers[i][j]; j++){
-        // console.log(numbers[i][j]);
-    }
+for (let i = 0; i < numbers.length; i++) {
+  for (let j = 0; j < numbers[i][j]; j++) {
+    // console.log(numbers[i][j]);
+  }
 }
 
+// Matrix Example
+const matrixA = [
+  [1, 0],
+  [3, 6],
+  [5, 9],
+];
 
+const matrixB = [
+  [0, 0],
+  [3, 5],
+  [5, 7],
+];
 
+const matrixSum = (matrixA, matrixB) => {
+    const result = [];
+  for (let i = 0; i < matrixA.length; i++) {
+      const row = [];
+      for(let j = 0; j < matrixA[i].length; j++){
+        row.push(matrixA[i][j] + matrixB[i][j])
+      }
+      result.push(row)
+  }
+  return result;
+}
 
+const matrixC = matrixSum(matrixA,matrixB);
+console.log(matrixC);
 
 /**
- * 
+ *
  **/

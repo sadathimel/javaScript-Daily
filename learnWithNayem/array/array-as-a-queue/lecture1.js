@@ -12,7 +12,7 @@ class Queue {
             return false;
         }
 
-        this.queue[this.rear++] = items; 
+        this.queue[this.rear++] = item; 
     }
 
     dequeue(){
@@ -38,7 +38,7 @@ class Queue {
         }
     }
     nex(){
-        if(this.isEmpty) {
+        if(this.isEmpty()) {
             console.log('Queue is Empty')
             return
         }
@@ -53,3 +53,4 @@ class Queue {
 
 
 // [2,3,4,5,empty]
+module.exports = Queue;

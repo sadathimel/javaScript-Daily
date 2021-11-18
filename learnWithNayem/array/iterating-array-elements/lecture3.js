@@ -7,11 +7,10 @@ const studentArray = [
 ];
 
 // const lowGpa = studentArray.filter((value)=>value.gpa < 3);
-// const lowGpa = studentArray.filter((value)=>{
-//   if(value.dueAmount  > 0 ){
-//     return{
-//         ...value,
-//         inspiringMessage: `hi, ${value.name} your result ${value.dueAmount > 0 ? "your have a due" : "thanks you don't due"} ` 
-//     };
-// }})
-// console.log(lowGpa);
+const lowGpa = studentArray.filter((value)=>value.dueAmount  > 0 ).map((value)=>{
+    return{
+        ...value,
+        inspiringMessage: `hi, ${value.name} , ${value.dueAmount > 0 ? "your have a due" : "thanks you don't due "} ${value.dueAmount} ` 
+    }
+});
+console.log(lowGpa);

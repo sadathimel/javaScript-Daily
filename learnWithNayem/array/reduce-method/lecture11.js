@@ -5,7 +5,7 @@ const squares = numbers.reduce((acc,cur)=>{
     acc.push(cur * cur);
     return acc
 },[]);
-console.log(squares);
+// console.log(squares);
 
 // Filter
 const odds = numbers.reduce((acc,cur)=>{
@@ -14,4 +14,22 @@ const odds = numbers.reduce((acc,cur)=>{
     }
     return acc;
 },[])
-console.log(odds)
+// console.log(odds);
+
+const bigArray = [];
+for(let i = 0; i < 500000; i++){
+    bigArray.push(i);
+}
+
+// Map and Filter
+let big = bigArray.filter((v)=>v % 2 === 0).map((v)=>v*2);
+console.log(big);
+
+// Rrduce
+let big1 = bigArray.reduce((acc, cur)=> {
+    if(cur % 2 === 0) {
+        acc.push(cur * 2);
+    }
+    return acc;
+},[]);
+console.log(big1);

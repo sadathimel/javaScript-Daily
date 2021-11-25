@@ -1,0 +1,10 @@
+1. https://sadathimel.github.io/javaScript-daily-/10%20project/auto-write-text/index.html
+2. https://sadathimel.github.io/javaScript-daily-/10%20project/background-changer/index.html
+3. https://sadathimel.github.io/javaScript-daily-/10%20project/carousel/index.html
+4. https://sadathimel.github.io/javaScript-daily-/10%20project/dark-mode-toggle/index.html
+5. https://sadathimel.github.io/javaScript-daily-/10%20project/hamburger/index.html
+6. https://sadathimel.github.io/javaScript-daily-/10%20project/popup/index.html
+7. https://sadathimel.github.io/javaScript-daily-/10%20project/purple-heart-rain/index.html
+8. https://sadathimel.github.io/javaScript-daily-/10%20project/sound-board/index.html
+9. https://sadathimel.github.io/javaScript-daily-/10%20project/toast-notification/index.html
+10. http://127.0.0.1:5500/10%20project/zoom-effect/index.html

@@ -8,10 +8,11 @@
     width: 300px;
     height: 250px;
     overflow: hidden;
-    /* background-image: url('./preview1.png'); */
+    /* background-image: url('./preview2.png'); */
     background-image: url('./slide1/bg.jpg');
     background-size: 100% 100%;
     position:relative;
+    box-sizing: border-box;
 }
 
 
@@ -63,6 +64,37 @@
     right: 9px;
 }
 
+.pp_wrapper .element_fridge{
+    width: 76px;
+    height: 203px;
+    top: 17px;
+    right: 65px;
+}
+
+.pp_wrapper .element_8 {
+    width: 116px;
+    height: 34px;
+    bottom: 31px;
+    right: 25px;
+}
+.pp_wrapper .element_9 {
+    width: 188px;
+    height: 183px;
+    bottom: 61px;
+    right: 0px;
+}
+.pp_wrapper .element_10 {
+    width: 85px;
+    height: 190px;
+    bottom: 22px;
+    left: 41px;
+}
+.pp_wrapper .element_11 {
+    width: 300px;
+    height: 47px;
+    bottom: 0px;
+    left: 0px;
+}
 
 .absolute{
     position: absolute;
@@ -104,6 +136,25 @@
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+}
+
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleX(1)
+    }
+    50% {
+        transform: scale3d(.95, .95, .95)
+    }
+    to {
+        transform: scaleX(1)
+    }
 }
 
 

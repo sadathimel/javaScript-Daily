@@ -18,3 +18,8 @@ input{
     transition: all 0.1s;
 }
 
+input:focus {
+    outline: none;
+    color: rgba(255, 255, 255, .75);
+    border-color: rgba(255, 255, 255, .75);
+}

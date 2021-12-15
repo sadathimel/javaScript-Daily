@@ -107,6 +107,38 @@
     bottom: 0;
     z-index: 1;
 }
+.slide_1{z-index: 2;}
+
+.slide_1_anim {
+	left: 180px !important;
+    top: 66px;
+    width: 35px;
+    height: auto;
+    transition: left 1s, width 1s;
+}
+
+.slide_2_anim {
+	left: 180px !important;
+    top: 155px;
+    width: 36px;
+    height: auto;
+    transition: left 1s, width 1s, top 1.2s;
+}
+.slide_3_anim {
+	left: 178px !important;
+    top: 137px;
+    width: 40px;
+    height: auto;
+    transition: left 1s, width 1s, top 1.1s;
+}
+.slide_4_anim {
+	left: 175px !important;
+    top: 120px;
+    width: 50px;
+    height: auto;
+    transition: left 1s, width 1s, top 1s;
+}
+
 .hidden {
     display: none;
 }

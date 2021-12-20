@@ -46,7 +46,7 @@ function dragElement( elmnt, item ) {
     pos3 = e.clientX;
     leftSpace = elmnt.offsetLeft - pos1;
 
-    draggedResult( elmnt, leftSpace, item );    
+    draggedResult( elmnt, leftSpace, item );     
   }
 
   function closeDragElement() {

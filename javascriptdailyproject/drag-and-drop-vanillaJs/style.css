@@ -5,4 +5,59 @@ body{
 h2{
     font-family: 'sofia';
     font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.emptyBox {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: white;
+}
+
+.fill {
+    background-image: url('https://avatarfiles.alphacoders.com/286/thumb-28639.jpg');
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+.hold {
+    border: solid #ccc 4px;
+}
+
+.hovered {
+    background-color: thistle;
+    border-style: dashed;
+}
+
+.invisible {
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    body {
+        margin: 0 0 0 30px
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    
+    h2 {
+        margin-right: 25px;
+        font-size: 15px;
+    }
+    .emptyBox {
+        float: left;
+        margin-left: 20px;
+    }
 }

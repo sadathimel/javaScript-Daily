@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'chilanka';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    color: black;
+    background-image: url("./newyear.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main{
+    padding: 35px;
+    margin-bottom: 20px;
+    border-radius: 29px;
+    -moz-border-radius: 29px;
+    -webkit-border-radius: 29px;
+    border: 5px solid rgb(242, 236, 1);
+    box-shadow: 26px 28px 21px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 26px 28px 21px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 26px 28px 21px 3px rgba(0, 0, 0, 0.75);
+}
+
+.title {
+    color: rgb(255, 255, 77);
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter .item {
+    margin: 0 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+}
+
+.counter .item div{
+    line-height: 18px;
+    margin: 10px 0;
+}
+.counter .item div:first-child{
+    font-size: 32px;
+}
+.counter .item div:last-child{
+    font-size: 18px;
+    text-transform: lowercase;
+}
+@media only screen and(max-width:800px){
+    .main{
+        max-width: 60vw;
+        max-height: auto;
+    }
+    .title {
+        max-width: 60vw;
+    }
+}
+@media only screen and(max-width:500px){
+    .main{
+        max-width: 65vw;
+        max-height: auto;
+        margin-bottom: 20px;
+    }
+    .title {
+        max-width: 65vw;
+        font-size: 30px;
+    }
+    .counter .item {
+        width: 100%;
+        margin: 0 4px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        float: left;
+        box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 18px 29px 28px 1px rgba(0, 0, 0, 0.75);
+    }
+}

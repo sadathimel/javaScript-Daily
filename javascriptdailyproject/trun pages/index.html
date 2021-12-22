@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ad.size" content="width=300,height=250">
+    <title> Drag and Drop Animation by PurplePatch </title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/ico/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./turn.min.js"></script>
+
+</head>
+
+<body>
+    <div class="pp_wrapper"  >
+        <div class="slide_1 absolute">
+            <div class="element-1 absolute "><img src="./assets/bottombg.png" alt=""></div>
+            <div class="element-2 absolute "><img src="./assets/bottomtext.png" alt=""></div>
+            <div class="element-3 absolute "><img src="./assets/ctabtn.png" alt=""></div>
+        </div>
+
+        <div class="slide_2 absolute" > 
+            <!-- <div style="background-image:url(./assets/topbg.png);" class="element-4"></div> -->
+            <!-- <div></div> -->
+            <div class="element-4 absolute"><img src="./assets/topbg.png" alt=""></div>
+            <div></div>
+            
+        </div>
+
+    </div>
+   
+    
+<!-- <script src="./purplepatch.js"></script> -->
+
+<script type="text/javascript"> 
+
+    $(window).ready(function() {
+        $('.slide_2').turn({
+            acceleration: true,
+            gradients: !$.isTouch,
+            right: 0,
+            bottom: 78,
+            width: 300,
+            height: 183,
+            
+
+        });
+    });
+        
+
+</script> 
+
+
+
+
+<!-- <script>
+    $(document).ready(function(){
+    $(".pp_wrapper").click(function(){
+        window.open("{CLICK_MACRO}")
+    });
+});
+</script> -->
+</body>
+</html>

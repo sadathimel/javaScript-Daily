@@ -1,0 +1,183 @@
+ * {margin: 0;padding: 0;text-decoration: none;user-select: none;}
+        .pp_wrapper {
+            width: 300px;
+            height: 250px;
+            /* background-image: url("./assets/2ndPreview.jpg"); */
+            background-image: url("./assets/bn.jpg");
+            background-size: 100% 100%;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .absolute{position: absolute;}
+        .slide_1,.slide_2,.slide_3 {top:0;bottom:0;left:0;right:0;}
+        .logo{right:3px;top:5px;width:32px;height: 47px;}
+        .element-1 {
+            right: 0px;
+            bottom: 0px;
+            width: 300px;
+            height: 95px;
+        }
+        .element-2 {
+            right: 117px;
+            bottom: 16px;
+            width: 167px;
+            height: 40px;
+        }
+        .element-3 {
+            right: 0px;
+            bottom: 10px;
+            width: 107px;
+            height: 46px;
+        }
+        .element-4 {
+            right: 0px;
+            bottom: 78px;
+            width: 300px;
+            height: 183px;
+        }
+
+        .btn {
+            right: 0px;
+            bottom: 0px;
+            width: 300px;
+            height: 250px;
+        }
+        /* .etn {
+            right: 142px;
+            bottom: 1px;
+            width: 165px;
+            height: 250px;
+        } */
+        /* .dragable, .draggableElement {
+            top: 89px;
+            bottom: 42px;
+            left: 206px;
+            cursor: pointer;
+            width: 50px;
+            height: 156px;
+            animation: bottle 3s ease-in-out infinite;}
+
+            .drag_output {
+                left: 39px;
+                top: 22px;
+            }
+        .drag_text {
+            top: 60px;
+            left: 132px;
+            width: 173px;
+            height: 41px;
+        }
+        .drag {
+            top: 79px;
+            left: 143px;
+            cursor: pointer;
+        } */
+
+        
+        .buyButton{bottom: 0;left: 20px;cursor: pointer;width: 143px;height: 197px;}
+        .hidden {display: none;}
+        .zoomInOut{animation-name: zoomInOut;animation-duration: 1.12s;animation-fill-mode: both;animation-delay: 1.48s}
+
+        @keyframes zoomInOut {
+            0% {transform: scale3d(1, 1, 1)}
+            25% {transform: scale3d(.85, .85, .85)}
+            50% {transform: scale3d(1, 1, 1)}
+            75% {transform: scale3d(.85, .85, .85)}
+            100% {transform: scale3d(1, 1, 1)}
+        }
+
+        @keyframes shake {
+            0%{transform : translateX(-5px);}
+            50%{ transform : translateX(10px);}
+            100%{transform : translateX(-5px);}
+        }
+        @keyframes bottle {
+            0% {transform: rotateZ(0deg)}
+            10% {transform: rotateZ(-5deg)}
+            20% {transform: rotateZ(5deg)}
+            30% {transform: rotateZ(-5deg)}
+            40% {transform: rotateZ(5deg)}
+            50% {transform: rotateZ(-5deg)}
+            60% {transform: rotateZ(0deg)}
+           100% {transform: rotateZ(0deg) }
+        }
+        @keyframes fadeMove {
+            from {transform: translate3d(0, 80px, 0)}
+        }
+        @keyframes fadeInUp {
+            from {opacity: 0;transform: translate3d(0, 80px, 0)}
+        }
+        @keyframes fadeInZoom {
+            0% {transform: scaleX(1.1)}
+            50% {transform: scale3d(.8, .8, .8) translate3d(0, 35px, 0)}
+            to {transform: scaleX(1)}
+        }
+        @keyframes pulse {
+            0% {transform: scaleX(1)}
+            50% {transform: scale3d(.95, .95, .95)}
+            to {transform: scaleX(1)}
+        }
+        @keyframes hideToBottom {
+            100% {opacity: 0;transform: translate3d(0, 200px, 0)}
+        }
+        @keyframes showFromBottom {
+            100%{opacity:0;transform: translate3d(0, 0px, 0)}
+        }
+        @keyframes hideZoomOut {
+            100% {opacity: 0;transform: scale3d(.3, .3, .3)}
+        }
+        @keyframes showZoomIn {
+            from {opacity: 0;transform: scale3d(.5, .5, .5)}
+            to {opacity:1;transform: scale3d(1, 1, 1)}
+        }
+        @keyframes flyingMove {
+            0%,100% {transform: translateX(0px)}
+            50% {transform: translateX(5px)}
+        }
+        .flyingMove {animation-name: flyingMove;animation-duration: 1s;animation-iteration-count: infinite;}
+        .fadeMove {animation: fadeMove 1s infinite;}
+        .fadeInUp {animation-name: fadeInUp;animation-duration: .7s;animation-fill-mode: both}
+        .fadeInZoom {animation-name: fadeInZoom;animation-duration: .7s;animation-fill-mode: both}
+        .pulse {animation-name: pulse;animation-duration: 2s;animation-iteration-count: infinite;}
+        .hideToBottom {animation-name: hideToBottom;animation-duration: 1s;animation-fill-mode: both}
+        .showFromBottom {animation-name: showFromBottom;animation-duration: 1s;animation-fill-mode: both}
+        .hideZoomOut {animation-name: hideZoomOut;animation-duration: .5s;animation-fill-mode: both; animation-iteration-count: 1}
+        .showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
+        .shake {animation: shake 2s cubic-bezier(.36, .07, .19, .97) infinite;transform: translate3d(0, 0, 0);backface-visibility: hidden;perspective: 1000px;}
+
+        ._3rd-slide {
+            width: 264px;
+            height: 195px;
+            top: 55px;
+            right: 0px;
+        }
+        .buyButton{
+            width: 85px;
+            height: 22px;
+            top: 88px;
+            left: 122px;
+        }
+
+        .model {
+            width: 144px;
+            height: 194px;
+            bottom: 0px;
+            left: 11px;
+        }
+
+        .copy3 {
+            width: 194px;
+            height: 30px;
+            top: 14px;
+            left: 10px;
+        }
+
+        
+
+        .healthyhair{
+            width: 143px;
+            height: 197px;
+            bottom: 0px;
+            left: 30px;
+        }

@@ -9,11 +9,15 @@ function counter(){
             hour = minute * 60,
             day = hour * 24;
 
-        let dayLeft = Math.floor(timeLeft / day),    
-            hourLeft = Math.floor((timeLeft % day) / hour),    
-            minuteLeft = Math.floor((timeLeft % hour) / minute),    
-            secondLeft = Math.floor((timeLeft % minute) / second);
+        let dayLeft = addZero(Math.floor(timeLeft / day),3),    
+            hourLeft = addZero(Math.floor((timeLeft % day) / hour),2),    
+            minuteLeft = addZero(Math.floor((timeLeft % hour) / minute),2),    
+            secondLeft = addZero(Math.floor((timeLeft % minute) / second),2);
             
+
+            function addZero (num,count){
+                return num.toString().padStart(count, "0");
+            }
             
         document.getElementById('day').innerHTML = dayLeft;
         document.getElementById('hour').innerHTML = hourLeft;
@@ -21,7 +25,6 @@ function counter(){
         document.getElementById('second').innerHTML = secondLeft;    
 }
 setInterval(()=>{
-    
     counter();
-})
+},1000)
 

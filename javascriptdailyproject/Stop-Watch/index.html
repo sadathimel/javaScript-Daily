@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="body">
+        <div class="container">
+            <h1>Stop Watch</h1>
+                <p id="num">
+                    <b>
+                        <span id="min">00</span>
+                        <span class="dot"> : </span>
+                        <span id="sec">00</span>
+                        <span class="dot"> : </span>
+                        <span id="mili">00</span>
+                    </b>
+                </p>
+
+                <div class="buttons">
+                    <button class="btn effect01" id="start"><span>START</span></button>
+                    <button class="btn effect01" id="stop"><span>STOP</span></button>
+                    <button class="btn effect01" id="reset"><span>RESET</span></button>
+                    <button class="btn effect01" id="lap"><span>LAP</span></button>
+                </div>
+                <p id="perlap"></p>
+
+                <br>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

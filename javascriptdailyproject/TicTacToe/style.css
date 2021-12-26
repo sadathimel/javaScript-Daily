@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,100&display=swap');
+*{
+ font-family: 'Permanent Marker', sans-serif;
+ text-align: center;
+ box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+#d1 {
+    display: flex;
+    justify-content: center;
+}
+td{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 60px;
+    /* color: white; */
+    cursor: pointer;
+}
+
+#i1,
+#i2,
+#i4,
+#i5,
+#i7,
+#i8 {
+    border-right: 2px solid black;
+}
+
+#i1,
+#i2,
+#i4,
+#i3,
+#i5,
+#i6 {
+    border-bottom: 2px solid black;
+}
+
+#p1 {
+    font-size: 20px;
+}
+
+#b1 {
+    visibility: hidden;
+    background-color: transparent;
+    border: 2p solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}

@@ -15,3 +15,27 @@ document.getElementById('b1').onclick = function(){
 
 var x = "0";
 var count = 0;
+
+
+
+function check(l){
+    if (x == "0") {
+        x = "X";
+    }else {
+        x = "0";
+    }
+    count++;
+    console.log(x)
+    if(p1.innerHTML == "" && count == 9){
+        p1.innerHTML = "Draw !";
+        // goBack();
+    }
+
+    document.getElementById("i" + l).innerHTML = x;
+    
+// console.log(i)
+
+    // function goBack(){
+    //     b1.style.visibility = "visible"
+    // }
+}

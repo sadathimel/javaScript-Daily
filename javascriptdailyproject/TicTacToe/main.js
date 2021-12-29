@@ -28,14 +28,16 @@ function check(l){
     console.log(x)
     if(p1.innerHTML == "" && count == 9){
         p1.innerHTML = "Draw !";
-        // goBack();
+        goBack();
     }
 
     document.getElementById("i" + l).innerHTML = x;
-    
-// console.log(i)
 
-    // function goBack(){
-    //     b1.style.visibility = "visible"
-    // }
+    document.getElementById("i")
+    
+console.log(i)
+
+    function goBack(){
+        b1.style.visibility = "visible"
+    }
 }

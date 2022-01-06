@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bKash drag and drop Animation by purplepatch </title>
+	<style>
+		* {margin: 0;padding: 0;text-decoration: none;user-select: none;}        
+        .pp_wrapper {
+            width: 300px;
+            height: 250px;
+            background-image: url("./slide1/bg.jpg");
+            /* background-image: url("./Previews/c4-img5.jpg"); */
+            background-color: black;
+            background-size: 100% 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide{ left: 0;right: 0;top: 0;bottom: 0; }
+        .absolute{position: absolute;} 
+        .hidden{display: none;}
+        .slide_1 .element_1{width: 93px;height: 55px;position: absolute;top: 15px;left: 17px;}
+        .slide_1 .element_2{width: 76px;height: 66px;position: absolute;bottom: 27px;left: 14px;}
+        .slide_1 .element_3{width: 140px;height: 74px;position: absolute;right: 8px;bottom: 30px;}
+        .slide_1 .element_4{width: 51px;height: 52px;position: absolute;bottom: 34px;left: 105px;}
+        /* .slide_1 .element_7{width: 300px;height: 250px;}
+        .slide_1 .element_5{width: 71px;height: 45px;left: 25px;bottom: 35px;cursor: pointer;transform:perspective(500px) rotateZ(-15deg);z-index: 890;}
+        .slide_1 .element_6{width: 300px;height: 250px;z-index: 900;bottom: -30px;pointer-events: none}
+        .slide_common{width: 31px;height: 6px;right: 10px;bottom: 15px;} */
+
+        .slide_2 .element_1 {width: 35px;height: 134px;position: absolute;bottom: 32px;right: 150px;}
+        .slide_3 .element_1 {width: 176px;height: 79px;position: absolute;bottom: 28px;right: -9px;}
+        
+        .slide_4 .element_1 {width: 93px;height: 55px;position: absolute;top: 15px;left: 17px;}
+        .slide_4 .element_2 {width: 238px;height: 183px;position: absolute;bottom: 4px;right: 23px;}
+
+
+        .slide_5 .element_1 {width: 150px;height: 89px;position: absolute;top: 23px;left: 75px;}
+        .slide_5 .element_2 {width: 115px;height: 41px;position: absolute;bottom: 18px;right: 91px;}
+        .slide_5 .element_3 {width: 244px;height: 30px;position: absolute;bottom: 81px;right: 28px;}
+        /* .slide_2 .element_2 {width: 300px;height: 250px;}
+        .slide_2 .element_3 {width: 300px;height: 250px;left: 130px;}
+        .slide_2 .element_4 {width: 300px;height: 250px;}
+        .slide_2 .element_5 {width: 300px;height: 250px;opacity: 0;}
+        .slide_2 .element_6 {width: 300px;height: 250px;}
+        .slide_2 .element_7 {width: 300px;height: 250px;} */
+        @keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+@keyframes fadeMove {
+    from {
+        transform: translate3d(0, 80px, 0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 80px, 0);
+    }
+}
+@keyframes fadeInZoom {
+    0% {
+        transform: scaleX(1.1);
+    }
+    50% {
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0, 35px, 0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scale3d(0.95, 0.95, 0.95);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes hideToBottom {
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 200px, 0);
+    }
+}
+@keyframes showFromBottom {
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+@keyframes hideZoomOut {
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+@keyframes showZoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes flyingMove {
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+.flyingMove {
+    animation-name: flyingMove;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.fadeMove {
+    animation: fadeMove 1s infinite;
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+.fadeInZoom {
+    animation-name: fadeInZoom;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.hideToBottom {
+    animation-name: hideToBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.showFromBottom {
+    animation-name: showFromBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.hideZoomOut {
+    animation-name: hideZoomOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.showZoomIn {
+    animation-name: showZoomIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.shake {
+    animation: shake 3.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+.vapour{
+	
+	padding: 0 20px;
+    height: 20px;
+    width: 30px;
+}
+.vapour span {
+	bottom: 50px;
+	display: block;
+	margin: 0 2px 50px;
+	min-width: 8px;
+	height: 120px;
+	background: rgb(255, 255, 255);
+	border-radius: 50%;
+	animation: animate 5s linear infinite;
+	opacity: 0;
+	filter: blur(4px);
+	animation-delay: calc(var(--i) * -0.5s);
+}
+@keyframes animate {
+	0%{
+		transform: translateY(0) scaleX(1);
+		opacity: 0;
+	}
+	15%{
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(-150px) scaleX(5);
+	}
+	95%{
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(-300px) scaleX(10);
+	}
+}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="pp_wrapper">
+
+        <div class="slide vapour hidden absolute">
+            <span style="--i:1;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:3;"></span>
+            
+        </div>
+     
+        <div class="slide slide_1 absolute">
+            <div class="element element_1 absolute"> <img src="./slide1/btlogosmall.png" alt=""> </div>
+            <div class="element element_2 absolute"> <img src="./slide1/t1.png" alt=""> </div>
+            <div class="element element_3 absolute"> <img src="./slide1/cup1.png" alt=""> </div>
+            <div class="element element_4 absolute"> <img src="./slide1/teabag1.png" alt=""> </div>
+        </div>
+        <div class="slide slide_2 absolute hidden">
+            <div class="element element_1 absolute"><img src="./slide2/teabag2.png" alt=""></div>
+        </div>      
+        <div class="slide slide_3 absolute hidden">
+            <div class="element element_1 absolute"><img src="./slide3/cup2.png" alt=""></div>
+        </div>      
+        <div class="slide slide_4 absolute hidden">
+            <div class="element element_1 absolute"><img src="./slide4/btlogosmall.png" alt=""></div>
+            <div class="element element_2 absolute"><img src="./slide4/products.png" alt=""></div>
+        </div>      
+        <div class="slide slide_5 absolute hidden">
+            <div class="element element_1 absolute showZoomIn"><img src="./slide5/btlogobig.png" alt=""></div>
+            <div class="element element_2 absolute pulse"><img src="./slide5/btn.png" alt=""></div>
+            <div class="element element_3 absolute showZoomIn"><img src="./slide5/t5.png" alt=""></div>
+        </div>      
+    </div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+	<script>
+		
+let dragger_one = $(".slide_2 .element_1")[0];
+// let dragger_one = $(".slide_1 .element_4")[0];
+// var click_macro = "{CLICK_MACRO}";
+
+slide_1_show();
+function slide_1_show(){
+	$(".slide_1").removeClass("hidden");
+	// $(".slide_1").removeClass("hidden");
+    $(".slide_1 .element_4").addClass("shake");
+    // $(".slide_1 .draggableElement").removeClass("hidden");
+    $(".slide_1 .element_4").mouseover(function(){
+        $(".slide_1 .element_4").removeClass("shake");
+        $(".slide_2 .element_1").addClass("shake");
+        $(".slide_1 .element_4").addClass("hidden");
+        $(".slide_2").removeClass("hidden");
+    });
+    $(".slide_1 .element_4").on('touchstart ',function(){
+        $(".slide_1 .element_4").removeClass("shake");
+        $(".slide_2 .element_1").addClass("shake");
+        $(".slide_1 .element_4").addClass("hidden");
+        $(".slide_2").removeClass("hidden");
+    });
+}
+
+function slide_2_show(){
+	
+	$(".slide_1 .element_4").removeClass("pulse");
+  	$(".slide_1 .element_3").addClass('hidden');
+  // $("[class^='dragger_']").addClass('hideZoomOut');
+  setTimeout(function() {
+  	// $(".slide_2").removeClass('hidden').addClass('showZoomIn');
+  	$(".slide_3").removeClass('hidden');
+  	// $(".slide_3 .element_1").addClass('pulse');
+
+    setTimeout(function(){
+     	$(".slide_2 .element_3").addClass("rightToLeft");
+      setTimeout(function(){
+        $(".slide_2 .element_1").css('opacity','.01');
+        setTimeout(function(){
+            $(".slide_1 ,.slide_2, .slide_3").addClass('hidden');
+            $(".slide_4").removeClass('hidden');
+                setTimeout(function(){
+                $(".slide_4").addClass('hidden');
+                $(".slide_5").removeClass('hidden');
+            },1000);
+        },1000);
+       
+      },0);
+    }, 1000);
+  }, 0);
+  $(".pp_wrapper .slide_5").click(function(){
+    window.open(click_macro);
+  });
+}
+
+
+
+
+if (typeof window.orientation !== 'undefined'){
+  dragElementMobile(dragger_one);
+}else{
+  dragElement(dragger_one);
+}
+
+
+function dragElement( elmnt ) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, pos5=0, pos6=0;
+  elmnt.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) 
+  {
+    $(".slide_1 .element_4").removeClass("shake").addClass("hidden");
+    $(".slide_2 .element_1").removeClass("shake");
+    $(".slide_1 .element_5").removeClass("shake");
+    $(".slide_1 .element_4").addClass("hideZoomOut");
+
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+    document.onmousemove = elementDrag;
+    document.onmouseup = closeDragElement;
+  }
+
+  function elementDrag(e) {    
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    topSpace = elmnt.offsetTop - pos2;
+    leftSpace = elmnt.offsetLeft - pos1;
+    x=leftSpace;
+    $(".slide_1 .element_5").css('transform','perspective(500px) rotateY(' + -x + 'deg) rotateZ(-15deg)');
+    if(leftSpace>85)
+    {
+      $(".slide_2 .element_1 .element_5_1").css("opacity","0");
+      $(".slide_2 .element_1 .element_5_2").css("opacity","1");
+    }else{
+      $(".slide_2 .element_1 .element_5_1").css("opacity","1");
+      $(".slide_2 .element_1 .element_5_2").css("opacity","0");
+    }
+
+    if(leftSpace>200){
+      $(".slide_1 .element_4").addClass("hideZoomOut");
+      setTimeout(slide_2_show, 600);
+      closeDragElement();
+    }
+
+    // console.log(leftSpace)
+    if(leftSpace>200) leftSpace=200;
+    if(leftSpace<117) leftSpace=117;
+    if(topSpace>160) topSpace=158;
+    if(topSpace<30) topSpace=35;
+    if(topSpace>160) topSpace=158;
+    if(topSpace<30) topSpace=35;
+
+    elmnt.style.top = topSpace + "px";
+    elmnt.style.left = leftSpace + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+function dragElementMobile(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, pos5=0, pos6=0;
+  elmnt.ontouchstart = dragMouseDown;
+  
+  function dragMouseDown(e) {
+    $(".slide_1 .element_4").removeClass("shake").addClass("hidden");
+    $(".slide_2 .element_1").removeClass("shake");
+    $(".slide_1 .element_5").removeClass("shake");
+    $(".slide_1 .element_4").addClass("hideZoomOut");
+    e.preventDefault();
+
+    e = e.touches[0] || window.event;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+    document.ontouchmove = elementDrag;
+  }
+
+
+
+  function elementDrag(e) {
+    e = e.touches[0] || window.event;
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    topSpace = elmnt.offsetTop - pos2;
+    bottomSpace = elmnt.offsetBottom + pos2;
+    leftSpace = elmnt.offsetLeft - pos1;
+
+    x=leftSpace;
+    $(".slide_1 .element_5").css('transform','perspective(500px) rotateY(' + -x + 'deg) rotateZ(-15deg)');
+    if(leftSpace>85)
+    {
+      $(".slide_2 .element_1 .element_1_1").css("opacity","0");
+      $(".slide_2 .element_1 .element_1_2").css("opacity","1");
+    }else{
+      $(".slide_2 .element_1 .element_1_1").css("opacity","1");
+      $(".slide_2 .element_1 .element_5_2").css("opacity","0");
+    }
+
+    if(leftSpace>170){
+      $(".slide_1 .element_5").addClass("hideZoomOut");
+      setTimeout(slide_2_show, 600);
+      closeDragElement();
+    }
+
+    console.log(bottomSpace)
+    if(leftSpace>205) leftSpace=205;
+    if(leftSpace<105) leftSpace=105;
+    if(topSpace>160) topSpace=158;
+    if(topSpace<30) topSpace=35;
+    if(bottomSpace>160) bottomSpace=158;
+    if(bottomSpace<30) bottomSpace=35;
+
+    elmnt.style.top = topSpace + "px";
+    elmnt.style.left = leftSpace + "px";   
+    elmnt.style.bottom = bottomSpace + "px";   
+  }
+  function closeDragElement() {
+    document.ontouchend = null;
+    document.touchmove = null;
+  }
+}
+
+	</script>
+</body>
+</html>

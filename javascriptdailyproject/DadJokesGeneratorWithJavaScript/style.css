@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,800;1,200;1,400&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,100&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #686de0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Mulish',sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 800px;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h3{
+    margin: 0;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.joke{
+    font-size: 30px;
+    line-height: 40px;
+    margin: 50px 0;
+    max-width: 600px;
+}
+
+.btn{
+    background-color: #9f68e0;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 14px 40px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}

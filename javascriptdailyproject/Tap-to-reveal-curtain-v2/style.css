@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.pp_wrapper {
+    width: 300px;
+    height: 250px;
+    /* background-image: url("./img/bg.jpg"); */
+    background-image: url("./slide1.jpg");
+    background-size: 100% 100%;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.absolute {
+    position: absolute;
+}
+
+
+.slide{
+	width: 300px;
+	height: 57px;
+	top: 0;
+	left: 0;
+	z-index: 990;
+}
+.slide_1{
+	width: 300px;
+	height: 250px;
+	top: 0;
+	left: 0;
+	z-index: 99;
+    background-image: url(./slide1/blck.png);
+    overflow: hidden;
+}
+
+.slide_2{
+	width: 300px;
+	height: 250px;
+	top: 0;
+	left: 0;
+    /* background-image: url(./slide2/wallbg.jpg); */
+    opacity: 0.7;
+
+}
+
+.element_1{
+    width: 108px;
+    height: 108px;
+    top: 69px;
+    left: 56px;
+    opacity: 1;
+	mix-blend-mode:overlay;
+	animation-name: leftAnimi;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+    z-index: 99;
+}
+.element_2{
+    width: 108px;
+    height: 108px;
+    top: 69px;
+    right: 139px;
+    opacity: 1;
+	mix-blend-mode:overlay;
+	animation-name: rightAnimi;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+    z-index: 99;
+}
+
+.element_3{
+    width: 35px;
+    height: 50px;
+    top: 148px;
+    left: 133px;
+    position: absolute;
+  
+}
+
+.element_4{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 57px;
+
+}
+
+.element_5{
+    width: 18px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+    /* overflow: hidden; */
+}
+.element_6{
+    width: 123px;
+    height: 250px;
+    top: 0px;
+    right: 0px;
+    /* overflow: hidden; */
+}
+.element_7{
+    width: 43px;
+    height: 9px;
+    top: 116px;
+    left: 95px;
+}
+.element_8{
+    width: 60px;
+    height: 29px;
+    right: 109px;
+    top: 112px;
+}
+.element_9{
+    width: 168px;
+    height: 29px;
+    left: 66px;
+    top: 74px;
+}
+.element_10{
+    width: 265px;
+    height: 54px;
+    top: 60px;
+    left: 19px;
+}
+.element_11{
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+}
+.element_12{
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+}
+.element_13{
+    width: 96px;
+    height: 21px;
+    bottom: 11px;
+    left: 102px;
+}
+
+.element_14{
+    width: 204px;
+    height: 97px;
+    left: 49px;
+    /* position: absolute; */
+    bottom: 34px;
+}
+.hidden {
+    display: none;
+}
+
+
+@keyframes offIn{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: .1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.offIn{
+	 animation-name: offIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+@keyframes fadeMove {
+    from {
+        transform: translate3d(0, 80px, 0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 80px, 0);
+    }
+}
+@keyframes fadeInZoom {
+    0% {
+        transform: scaleX(1.1);
+    }
+    50% {
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0, 35px, 0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scale3d(0.95, 0.95, 0.95);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes hideToBottom {
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 200px, 0);
+    }
+}
+@keyframes showFromBottom {
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+@keyframes hideZoomOut {
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+@keyframes showZoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes flyingMove {
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+.flyingMove {
+    animation-name: flyingMove;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.fadeMove {
+    animation: fadeMove 1s infinite;
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+.fadeInZoom {
+    animation-name: fadeInZoom;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.hideToBottom {
+    animation-name: hideToBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.showFromBottom {
+    animation-name: showFromBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.hideZoomOut {
+    animation-name: hideZoomOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.showZoomIn {
+    animation-name: showZoomIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.shake {
+    animation: shake 3.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+.top{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* background: linear-gradient(to right,#f9f9f9, #d9d9d9); */
+    border-radius: 50%;
+}
+
+.vapour{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    right: 0px;
+}
+.vapour span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-150px) scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-300px) scaleX(10);
+    }
+}
+
+
+
+.animation {
+    animation: 
+      pulse 3s ease infinite alternate, 
+      nudge 5s linear infinite alternate;
+    border-radius: 100%;
+  }
+  
+  
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
+  
+  
+  
+  
+  @keyframes leftAnimi{
+	0%{
+		left: 20px;
+	}
+	50%{
+		left: -2px;
+	}
+	100%{
+		left: 20px;
+	}
+}
+@keyframes rightAnimi{
+	0%{
+		right: 20px;
+	}
+	50%{
+		right: -2px;
+	}
+	100%{
+		right: 20px;
+	}
+}
+
+
+@keyframes fadeIn {
+    0%{
+    	opacity: 1;
+    }
+    100%{
+    	opacity: 0;
+    }
+}
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both
+}
+
+
+.leftR {
+    /* background: red; */
+    position: absolute;
+    animation: mymoveL 1s ease-in-out;
+   
+  }
+  
+  @keyframes mymoveL {
+    from {left: 95px;}
+    to {left: 0px;}
+  }
+
+.rightR {
+    /* background: red; */
+    position: absolute;
+    animation: mymoveR 1s ease-in-out;
+    
+  }
+  
+  @keyframes mymoveR {
+    from {right: 109px;}
+    to {right: 0px;}
+  }
+.leftL {
+    /* background: red; */
+    position: absolute;
+    animation: mymoveL 1s ease-in-out;
+   
+  }
+  
+  @keyframes mymoveL {
+    from {left: 0px;}
+    to {left: -150px;}
+  }
+
+.rightL {
+    /* background: red; */
+    position: absolute;
+    animation: mymoveR 1s ease-in-out;
+    
+  }
+  
+  @keyframes mymoveR {
+    from {right: 0px;}
+    to {right: -150px;}
+  }

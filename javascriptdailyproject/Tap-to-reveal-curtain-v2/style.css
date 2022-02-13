@@ -125,6 +125,7 @@
     height: 29px;
     left: 66px;
     top: 74px;
+    opacity: 1;
 }
 .element_10{
     width: 265px;
@@ -483,3 +484,20 @@
     from {right: 0px;}
     to {right: -150px;}
   }
+
+.InnerImage {
+    -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}

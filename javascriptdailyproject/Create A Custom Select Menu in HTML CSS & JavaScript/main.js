@@ -1,5 +1,6 @@
 const wrapper = document.querySelector('.wrapper'),
-selectBtn = wrapper.querySelector('.select-btn');
+selectBtn = wrapper.querySelector('.select-btn'),
+searchInp = wrapper.querySelector('input');
 options = wrapper.querySelector('.options');
 
 // array of some countries
@@ -19,6 +20,15 @@ function updateName(selectedLi){
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
 
 }
+
+searchInp.addEventListener('keyup', () => {
+    let arr = [];
+    let search = searchInp.value.toLowerCase();
+    arr = countries.filter(data => {
+        return data.toLowerCase().startsWith(search);
+    }).map(data => `<li>${data}</li>`).join('');
+    console.log(arr);
+});
 
 selectBtn.addEventListener('click', function(e) {
     e.preventDefault();

@@ -18,7 +18,6 @@ addCountry()
 function updateName(selectedLi){
     wrapper.classList.remove('active');
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
-
 }
 
 searchInp.addEventListener('keyup', () => {
@@ -27,7 +26,7 @@ searchInp.addEventListener('keyup', () => {
     arr = countries.filter(data => {
         return data.toLowerCase().startsWith(search);
     }).map(data => `<li>${data}</li>`).join('');
-    console.log(arr);
+    options.innerHTML = arr ? arr: `<li>No matches found</li>`;
 });
 
 selectBtn.addEventListener('click', function(e) {

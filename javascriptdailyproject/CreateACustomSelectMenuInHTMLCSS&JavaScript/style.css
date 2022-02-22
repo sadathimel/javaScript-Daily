@@ -28,6 +28,7 @@ body{
     font-size: 31px;
     margin-right: 10px;
     transition: transform 0.3s linear;
+
 }
 
 .wrapper.active .select-btn i{

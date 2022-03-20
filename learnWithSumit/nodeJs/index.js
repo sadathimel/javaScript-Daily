@@ -14,8 +14,12 @@ const EventEmitter = require('events');
 
 const emitter = new EventEmitter();
 
-emitter.on('message', () => {
-    console.log('Hello');
+emitter.on('message', ({ period, text }) => {
+    console.log(`Hello ${period} ${text}`);
 });
-
-emitter.emit('message');
+setTimeout(() => {
+    emitter.emit('message', {
+        period: 'first',
+        text: 'period ended',
+    });
+}, 2000);

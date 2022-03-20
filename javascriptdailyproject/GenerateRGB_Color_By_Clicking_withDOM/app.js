@@ -22,5 +22,5 @@ function generateRandomColor() {
     let green = Math.floor(Math.random() * 256);
     let blue = Math.floor(Math.random() * 256);
 
-    return `rgb(${red}, ${green}, ${blue})`;
+    return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
 }

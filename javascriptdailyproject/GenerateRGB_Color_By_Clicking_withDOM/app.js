@@ -5,11 +5,14 @@ window.onload = () => {
 function main() {
     const root = document.querySelector('#root');
     const btn = document.querySelector('#change-btn');
+    const output = document.querySelector('#output');
 
     btn.addEventListener('click', () => {
         const bgColor = generateRandomColor();
         root.style.backgroundColor = bgColor;
         btn.style.color = bgColor;
+        output.style.color = bgColor;
+        output.value = bgColor;
     })
 
     }

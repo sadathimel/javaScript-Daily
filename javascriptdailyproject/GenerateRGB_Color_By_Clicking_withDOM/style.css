@@ -7,9 +7,10 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
-    background: #000;
+    background: skyblue;
     width: 100vw;
     height: 100vh;
+    /* color: ; */
 }
 
 .container {
@@ -46,4 +47,17 @@ button:hover{
 
 h1 {
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+#output{
+    width: 5rm;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    color: white;
+    background: #000;
+    padding: 0px 0px 0px 10px;
 }

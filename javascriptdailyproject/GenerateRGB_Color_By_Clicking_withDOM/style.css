@@ -22,7 +22,7 @@ body{
     align-items: center;
 }
 
-button{
+button#change-btn{
     padding: 1rem 3rem;
     margin: 1rem 0;
     background: #000;
@@ -39,7 +39,7 @@ button{
     cursor: pointer;
     border: 1px solid #fff;
 }
-button:hover{
+button#change-btn:hover{
     background: #fff;
     color: #000;
     border: 1px solid #000;
@@ -47,6 +47,7 @@ button:hover{
 
 h1 {
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    margin: 2rem;
 }
 
 #output{
@@ -60,4 +61,40 @@ h1 {
     color: white;
     background: #000;
     padding: 0px 0px 0px 10px;
+}
+
+#input-group{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.copy-btn{
+    position: absolute;
+    left: 250px;
+    padding: .6rem 2rem;
+    margin: 1rem 0;
+    background: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.copy-btn:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }

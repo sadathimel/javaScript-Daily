@@ -6,6 +6,7 @@ function main() {
     const root = document.querySelector('#root');
     const btn = document.querySelector('#change-btn');
     const output = document.querySelector('#output');
+    const copyBtn = document.querySelector('#copy-btn');
 
     btn.addEventListener('click', () => {
         const bgColor = generateRandomColor();
@@ -13,9 +14,21 @@ function main() {
         btn.style.color = bgColor;
         output.style.color = bgColor;
         output.value = bgColor;
+        copyBtn.style.color = bgColor;
     })
 
-    }
+    copyBtn.addEventListener('click', function() {
+         window.navigator.clipboard.writeText(output.value);
+        //  alert('Copied to clipboard');
+         const para = document.createElement('p');
+           const node = document.createTextNode (`${output.value} Copied`);
+           para.appendChild(node);
+           
+           document.getElementById('input-group').appendChild(para);
+           setTimeout(() => {para.style.display='none'}, 1000);
+        
+    })
+}
    
 
 

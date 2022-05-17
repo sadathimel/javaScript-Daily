@@ -1,18 +1,19 @@
 import React from 'react';
-import { Image, StyleSheet, useWindowDimensions, View ,Text,Linking} from 'react-native';
+import { Image, StyleSheet, useWindowDimensions, View ,TouchableOpacity,Linking} from 'react-native';
+
 
 
 export default OnboardingItem = ({item})=> {
-  const url = "https://reactjs.org/logo-og.png";
-  callFun=()=>{
-    Linking.openURL(url);
-  }
+ 
   const { width } = useWindowDimensions();
     return (
       <View style={[styles.container, {width}]}>
         <Image source={item.logo} style={[styles.logo,{width, resizeMode: 'contain'}]}/>
         <Image source={item.image} style={[styles.image,{width, resizeMode: 'contain'},"{backgroundColor: {item.backgroundColor}}"]}/>
-        <Image onPress={this.callFun} source={item.button} style={[styles.button,{width, resizeMode: 'contain'}]}/>
+        <TouchableOpacity onPress={()=> Linking.openURL('https://purplepatch.online/')}>
+        <Image source={item.button} style={[styles.button,{width, resizeMode: 'contain'}]} />
+      </TouchableOpacity>
+       
       </View>
     );
   };

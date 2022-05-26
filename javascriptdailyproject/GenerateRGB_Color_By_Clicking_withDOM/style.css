@@ -98,3 +98,23 @@ h1 {
     color: #000;
     border: 1px solid #000;
 }
+
+.bckcolor{
+    position: absolute;
+    left: 250px;
+    padding: .6rem 2rem;
+    margin: 1rem 0;
+    background: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}

@@ -6,17 +6,17 @@
  * @flow strict-local
  */
 
- import { StatusBar } from 'expo-status-bar';
- import React from 'react';
- import { StyleSheet, View ,Text} from 'react-native';
- import Onboarding from './components/Onboarding';
+//  import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, View,StatusBar } from 'react-native';
+import Onboarding from './components/Onboarding';
  
  
  export default App = ()=> {
    return (
      <View style={styles.container}>
        <Onboarding />
-       <StatusBar  />
+       <StatusBar hidden />
 
      </View>
    )

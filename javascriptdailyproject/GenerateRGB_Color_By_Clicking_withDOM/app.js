@@ -22,6 +22,7 @@ function main() {
         //  alert('Copied to clipboard');
          const para = document.createElement('p');
            const node = document.createTextNode (`${output.value} Copied`);
+        //    para.classList.add('bckcolor');
            para.appendChild(node);
            
            document.getElementById('input-group').appendChild(para);

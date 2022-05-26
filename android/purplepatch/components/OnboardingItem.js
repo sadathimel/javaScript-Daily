@@ -10,7 +10,7 @@ export default OnboardingItem = ({item})=> {
       <View style={[styles.container, {width}]}>
         <Image source={item.logo} style={[styles.logo,{width, resizeMode: 'contain'}]}/>
         <Image source={item.image} style={[styles.image,{width, resizeMode: 'contain'},"{backgroundColor: {item.backgroundColor}}"]}/>
-        <TouchableOpacity onPress={()=> Linking.openURL('https://purplepatch.online/')}>
+        <TouchableOpacity onPress={()=> Linking.openURL('https://purplepatch.online/')}> 
         <Image source={item.button} style={[styles.button,{width, resizeMode: 'contain'}]} />
       </TouchableOpacity>
        
@@ -41,3 +41,4 @@ const styles = StyleSheet.create({
     }
 
 });
+

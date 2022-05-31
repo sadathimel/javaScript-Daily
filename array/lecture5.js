@@ -28,3 +28,18 @@ const a = 10;
         const result = funcs[i](a,b);
         console.log(result);
     }
+    
+    //Array of Arrays - Multi Dimensional Array
+    const pointTable = [
+        [0, 0],
+        [3, 5],
+        [5, 7],
+        [10, 23],
+    ];
+
+    //One Dimensional Traverse
+    for (let i = 0; i < pointTable.length; i++){
+        console.log(`Point ${i} - X = ${pointTable[i][0]} and Y = ${pointTable[i][1]}`);
+    }
+
+    //Two Dimensional Traverse

@@ -1,5 +1,5 @@
 const arr = [10, 'Ten', true, getTen, {ten:10}, [10, 10]];
-console.log(arr)
+// console.log(arr)
 
 function getTen(){
     return 10;
@@ -26,7 +26,7 @@ const a = 10;
 
     for (let i = 0; i < funcs.length; i++){
         const result = funcs[i](a,b);
-        console.log(result);
+        // console.log(result);
     }
     
     //Array of Arrays - Multi Dimensional Array
@@ -39,7 +39,22 @@ const a = 10;
 
     //One Dimensional Traverse
     for (let i = 0; i < pointTable.length; i++){
-        console.log(`Point ${i} - X = ${pointTable[i][0]} and Y = ${pointTable[i][1]}`);
+        // console.log(`Point ${i} - X = ${pointTable[i][0]} and Y = ${pointTable[i][1]}`);
     }
 
     //Two Dimensional Traverse
+    const numbers = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+
+    // for (let j = 0; j < numbers[0].length; j++){
+    //     console.log(numbers[0][j]);
+    // }
+    
+    for(let i = 0; i< numbers.length; i++){
+        for(j = 0; j < numbers[i].length; j++){
+            // console.log(numbers[i][j]);
+        }
+    }

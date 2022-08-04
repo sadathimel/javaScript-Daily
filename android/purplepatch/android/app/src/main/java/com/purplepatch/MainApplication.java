@@ -13,6 +13,14 @@ import com.purplepatch.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+
+import com.pabbl.content.api.ContentConfiguration;
+import com.pabbl.mx.android.DimensValue;
+import com.pabbl.sdk.api.PabblSdk;
+import com.pabbl.lockscreen.api.LockScreenConfiguration;
+import com.pabbl.sdk.javalib.configuration.SdkConfiguration;
+
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -50,13 +58,24 @@ public class MainApplication extends Application implements ReactApplication {
   }
 
   @Override
+  PabblSdk pabblSdk;
   public void onCreate() {
     super.onCreate();
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+
+    // Check if the SDK is ready to proceed with initialization
+    if (PabblSdk.busy(this)) return;
+
   }
+
+
+
+
+
+
 
   /**
    * Loads Flipper in React Native templates. Call this in the onCreate method with something like

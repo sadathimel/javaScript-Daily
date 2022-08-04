@@ -249,7 +249,11 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
-
+compileOptions{
+    coreLibraryDesugaringEnabled true
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+}
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -268,6 +272,9 @@ android {
 }
 
 dependencies {
+    implementation files('../libs/purplesdk-1.13.0.aar')
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion

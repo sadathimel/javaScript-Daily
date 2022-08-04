@@ -8,11 +8,14 @@
 
 // console.log(__dirname);
 // console.log(__filename);
-var a = 10;
+// var a = 10;
 
-function test(){
-    console.log('i am Test');
-}
+// function test(){
+//     console.log('i am Test');
+// }
 
 
-console.log(module)
+// console.log(module);
+
+import {add} from './math';
+console.log(add(10, 20));

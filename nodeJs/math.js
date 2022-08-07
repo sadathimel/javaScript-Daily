@@ -13,4 +13,4 @@ module.exports.test = (a, b) => add(a, b) / sub(a, b);
 // };
 // module.exports.add = add;
 // module.exports.test = test;
-console.log(module);
+// console.log(module);

@@ -17,5 +17,10 @@
 
 // console.log(module);
 
-import {add} from './math';
-console.log(add(10, 20));
+// import {add} from './math';
+
+const math = require('./math');
+
+console.log(math.add(10, 20));
+
+// console.log(add(10, 20));

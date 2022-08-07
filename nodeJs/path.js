@@ -17,3 +17,8 @@ console.log(path.isAbsolute(myCurrentPath));
 console.log(path.isAbsolute('./math.js'));
 
 console.log(path.join('user', 'local', 'textFile.js'));
+
+
+console.log(path.resolve(__dirname, 'scripts', 'test.js'));
+
+console.log(path.parse(myCurrentPath));

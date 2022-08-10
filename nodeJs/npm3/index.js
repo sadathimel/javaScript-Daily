@@ -8,3 +8,4 @@ console.log("This is New Line");
 
 // output console changes color and style
 console.log(chalk.blue('Hello') + ' World' + chalk.red('!'));
+

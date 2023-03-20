@@ -11,3 +11,4 @@
 	minute.style.transform = `rotate(${min_rotation}deg)`;
 	second.style.transform = `rotate(${sec_rotation}deg)`;
 
+	

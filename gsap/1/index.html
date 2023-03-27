@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScrollTrigger</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 600px;
+        height: 550px;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        display: block;
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+      }
+      .box1 {
+        display: block;
+        width: 75px;
+        height: 75px;
+      }
+      .green {
+        background-color: green;
+      }
+      .green {
+        width: 75px;
+        height: 75px;
+        /* margin-right: 20px; */
+      }
+      .red {
+        width: 75px;
+        height: 75px;
+        background-color: rgb(235, 10, 36);
+      }
+      .purple {
+        width: 75px;
+        height: 75px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- <img class="box" src="./plus_circle.png" alt="" />
+         <img class="box1" src="./plus_circle.png" alt="" /> -->
+      <!-- <div class="box green"></div>
+      <div class="box green"></div>
+      <div class="box green"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box green"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box red"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box red"></div> -->
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box purple"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <script>
+      //   gsap.to(".box", {
+      //     x: 100,
+      //   })
+
+      // gsap.from(".box", {
+      //     x:-40,
+      // })
+
+      //   gsap.fromTo(".box", { x: -400 }, { x: 150 });
+      // let box = document.querySelector(".box");
+      // let box1 = document.querySelector(".box1");
+      //   gsap.to([box, box1], { x: 200 });
+      //   gsap.to([box,box1], {
+      //     duration: 1,
+      //     x: 200,
+      //     rotation: 360,
+      //   });
+
+      //       gsap.to(".box",{
+      //         //   x: 200, // use default of px
+      // //   x: "+=200" ,// relative values
+      // //   x: '40vw', // or pass in a string with a different unit for GSAP to parse
+      //   x: () => window.innerWidth / 2, // you can even use functional values to do a calculation!
+
+      //   rotation: 360 ,// use default of degrees
+      //   rotation: "1.25rad" // use radians
+      //       })
+
+      // gsap.to(".box", {
+      //     rotation: 360,
+      //     duration: 1,
+      //     repeat:1,
+      //     repeatDelay:1
+
+      // })
+
+      // gsap.to(".box1", {
+      //     rotation:360,
+      //     duration:1,
+      //     delay:1,
+      // })
+
+      //   gsap.to(".green", {
+      //     rotation: 360,
+      //     duration: 2,
+      //     repeat: -1,
+      //     // yoyo:true,
+      //     repeatDelay:2,
+      //     ease: "none",
+      //   });
+
+      //   gsap.to(".red",
+      //   {
+      //     rotation:360,
+      //     duration:2,
+      //     repeat:-1,
+      //     repeatDelay:2,
+
+      //     ease: "bounce.out"
+      //   })
+
+      // gsap.from(".box",{
+      //     duration:2,
+      //     scale:0.5,
+      //     opacity:0,
+      //     stagger: 0.2,
+      //     ease: "elastic",
+      //     force3D : true
+      // });
+      // document.querySelectorAll(".box").forEach(function(box){
+      //     box.addEventListener("click", function(){
+      //         gsap.to(".box",{
+      //             duration:2,
+      //             opacity:0,
+      //             y: -100,
+      //             stagger: 0.2,
+      //             ease: "back.in"
+      //         })
+      //     })
+      // })
+      // gsap.to(".box", {
+      //     scale: 0.1,
+      //     y:60,
+      //     yoyo: true,
+      //     repeat: -1,
+      //     ease: "power1.inOut",
+      //     delay:1,
+      //     stagger:{
+      //         amount: 0.5,
+      //         from: "center",
+      //         grid: "auto",
+      //         axis: "x",
+      //         repeat: -1,
+      //         yoyo: true,
+      //         ease: "power1.inOut"
+      //     }
+      // })
+
+      gsap.to(".red", {
+        rotation: 360,
+        duration: 1,
+      });
+      gsap.to(".green", {
+        rotation: 360,
+        duration: 1,
+        delay: 1,
+      });
+      gsap.to(".purple", {
+        rotation: 360,
+        duration: 1,
+        delay: 2,
+      });
+      gsap.to(".purple", {
+          duration: 1,
+          delay: 3,
+          y: 100,
+          rotation:-360,
+      });
+      gsap.to(".purple", {
+        duration: 1,
+        delay: 4,
+        x: 100,
+        rotation:360,
+      });
+      gsap.to(".purple", {
+        duration: 1,
+        delay: 5,
+        y: 0,
+        rotation:-360,
+      });
+      gsap.to(".purple", {
+        duration: 1,
+        delay: 6,
+        x: 0,
+        rotation:360
+      });
+    </script>
+  </body>
+</html>

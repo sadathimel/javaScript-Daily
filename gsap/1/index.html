@@ -17,7 +17,8 @@
         background-color: #f1f1f1;
         display: flex;
         justify-content: start;
-        align-items: center;
+        /* align-items: center; */
+        flex-direction: column;
         flex-wrap: wrap;
       }
 
@@ -91,6 +92,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
 
     <script>
       //   gsap.to(".box", {
@@ -191,43 +193,84 @@
       //     }
       // })
 
-      gsap.to(".red", {
-        rotation: 360,
-        duration: 1,
-      });
-      gsap.to(".green", {
-        rotation: 360,
-        duration: 1,
-        delay: 1,
-      });
-      gsap.to(".purple", {
-        rotation: 360,
-        duration: 1,
-        delay: 2,
-      });
-      gsap.to(".purple", {
-          duration: 1,
-          delay: 3,
-          y: 100,
-          rotation:-360,
-      });
-      gsap.to(".purple", {
-        duration: 1,
-        delay: 4,
+      // gsap.to(".red", {
+      //   rotation: 360,
+      //   duration: 1,
+      // });
+      // gsap.to(".green", {
+      //   rotation: 360,
+      //   duration: 1,
+      //   delay: 1,
+      // });
+      // gsap.to(".purple", {
+      //   rotation: 360,
+      //   duration: 1,
+      //   delay: 2,
+      // });
+      // gsap.to(".purple", {
+      //     duration: 1,
+      //     delay: 3,
+      //     y: 100,
+      //     rotation:-360,
+      // });
+      // gsap.to(".purple", {
+      //   duration: 1,
+      //   delay: 4,
+      //   x: 100,
+      //   rotation:360,
+      // });
+      // gsap.to(".purple", {
+      //   duration: 1,
+      //   delay: 5,
+      //   y: 0,
+      //   rotation:-360,
+      // });
+      // gsap.to(".purple", {
+      //   duration: 1,
+      //   delay: 6,
+      //   x: 0,
+      //   rotation:360
+      // });
+
+      // let tl = gsap.timeline();
+      // tl.to(".red", {
+      //   x: 600,
+      //   duration: 2,
+      // });
+      // tl.to(".green", {
+      //   x: 600,
+      //   duration: 1,delay:1
+      // });
+      // tl.to(".purple", {
+      //   x: 600,
+      //   duration: 1,
+      // });
+
+      // let tl =gsap.timeline()
+
+      // tl.to(".red", {
+      //   x:300, duration:2
+      // },3);
+      // tl.to(".green", {
+      //   x:300, duration:1
+      // }, "<");
+      // tl.to(".purple", {
+      //   x:300, duration:1
+      // }, "+=.5");
+
+      let tl = gsap.timeline( {repeat: -1, repeatDelay: 1});
+
+      tl.to(".red", {
         x: 100,
-        rotation:360,
+        duration: 2,
       });
-      gsap.to(".purple", {
-        duration: 1,
-        delay: 5,
-        y: 0,
-        rotation:-360,
+      tl.to(".green", {
+        x: 50,
+        duration: 2,
       });
-      gsap.to(".purple", {
-        duration: 1,
-        delay: 6,
-        x: 0,
-        rotation:360
+      tl.to(".purple", {
+        x: 50,
+        duration: 2,
       });
     </script>
   </body>

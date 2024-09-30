@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Spy Number Checker.</title>
+    <style>
+        .container {
+            text-align: center;
+            margin: 50px 0 0 0;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Spy Number Checker</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+        <button onclick="checkSpyNumber()">
+            Check
+        </button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+        function checkSpyNumber()
+        {
+            const numberInput = document.getElementById("numberInput").value;
+
+            const digits = numberInput.toString().split("").map(Number);
+
+            const sum = digits.reduce((a, b) => a + b, 0);
+            const product = digits.reduce((a, b) => a + b, 1);
+
+            if (sum === product)
+            {
+                document.getElementById("result").textContent = `${numberInput} is a Spy Number!`;
+            } else
+            {
+                document.getElementById("result").textContent = `${numberInput} is not a Spy Number!`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
